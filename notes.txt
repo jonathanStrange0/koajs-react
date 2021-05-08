@@ -1,0 +1,15 @@
+"koa-static" and "koa-mount" allow for serving the react app
+
+you must change the cra provided manifest.json in /public to include
+"start_url": "/",
+
+and in the CRA provided package.json add the line:
+"homepage": ".",
+
+in the (koa) server file add the following:
+
+const front_end = new Koa();
+front_end.use(serve(`${__dirname}/../client/build`));
+server.use(mount("/", front_end));
+
+This serves up the CRA app at the mount point "/"

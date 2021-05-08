@@ -5,6 +5,7 @@ import Koa from "koa";
 import Router from "@koa/router";
 import serve from "koa-static";
 import mount from "koa-mount";
+import path from 'path'
 // const Router = require("@koa/router");
 const server = new Koa();
 const router = new Router();
@@ -18,6 +19,7 @@ const front_end = new Koa();
 front_end.use(serve(`${__dirname}/../client/build`));
 server.use(mount("/test", front_end));
 // }
+
 
 router.get("/", async (ctx) => {
   return (ctx.body = "Hello world");

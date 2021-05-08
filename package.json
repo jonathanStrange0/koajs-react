@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "building a koa backend to auth a sfy store, then push to a react app",
   "main": "server.js",
+ 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./server/index.js",
