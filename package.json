@@ -1,0 +1,26 @@
+{
+  "name": "koa-sfy-auth-react",
+  "version": "1.0.0",
+  "description": "building a koa backend to auth a sfy store, then push to a react app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./server/index.js",
+    "start": "NODE_ENV=production node ./server/index.js"
+  },
+  "author": "Jonathan Mucha",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "7.12.10",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "@koa/router": "^10.0.0",
+    "dotenv": "^9.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "koa": "^2.13.1",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
